@@ -68,8 +68,10 @@ class StudentGrade extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    const { percentage, name, subject, students } = this.state;
+    const { percentage, students, subject} = this.state;
     let status = Number(percentage) >= 33 ? "Pass" : "Fail";
+    const name = this.state.name.trim()
+    
     const newStudent = {
       id: Date.now(),
       name,
@@ -180,6 +182,7 @@ class StudentGrade extends Component {
                   </label>
                   <input
                     type="number"
+                    required
                     onChange={this.handleChnage}
                     placeholder="70"
                     name="percentage"
@@ -214,13 +217,13 @@ class StudentGrade extends Component {
                     <div className="flex justify-end gap-1">
                       <button
                         onClick={() => this.handleDeleteClick(student.id)}
-                        className="px-2 py-1 rounded-xl font-bold text-white bg-red-500  my-3 hover:scale-[102%] transition-all duration-500 hover:bg-red-700"
+                        className="px-2 py-1 rounded-xl font-bold text-white bg-red-500 mb-1 hover:scale-[102%] transition-all duration-500 hover:bg-red-700"
                       >
                         Delete
                       </button>
                       <button
                         onClick={() => this.handleEditClick(student)}
-                        className="px-2 py-1 rounded-xl font-bold text-blue-400 bg-white my-3 hover:scale-[102%] transition-all duration-500"
+                        className="px-2 py-1 rounded-xl font-bold text-blue-400 mb-1 bg-white hover:scale-[102%] transition-all duration-500"
                       >
                         Edit
                       </button>
