@@ -212,7 +212,7 @@ class StudentGrade extends Component {
                 this.state.students.map((student) => (
                   <div
                     key={student.id}
-                    className="w-full max-w-[900px] p-5 rounded-2xl bg-blue-300 shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+                    className="w-full max-w-[900px] p-2 md:p-5 rounded-2xl bg-blue-300 shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
                   >
                     <div className="flex justify-end gap-1">
                       <button
@@ -228,29 +228,29 @@ class StudentGrade extends Component {
                         Edit
                       </button>
                     </div>
-                    <div className="lg:grid lg:grid-cols-4 gap-8 flex flex-col px-4 max-w-[1400px] mx-auto overflow-x-hidden">
+                    <div className="lg:grid lg:grid-cols-4 gap-2 sm:gap-8 flex flex-col sm:px-4  sm:max-w-[1400px] mx-auto overflow-x-hidden">
                       <div className="col-span-1 flex flex-col justify-center items-center text-blue-400 font-bold bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
-                        <div className="text-3xl font-bold bg-white rounded-2xl">
+                        <div className="sm:text-2xl text-xl  font-medium sm:font-semibold rounded-2xl">
                           Name
                         </div>
                         <div className="text-blue-500">{student.name}</div>
                       </div>
                       <div className="col-span-1 flex flex-col justify-center items-center text-blue-400 font-bold bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
-                        <div className="text-3xl font-bold rounded-2xl">
+                        <div className="sm:text-2xl text-xl  font-medium sm:font-semibold  rounded-2xl">
                           Subject
                         </div>
                         <div className="text-blue-500">{student.subject}</div>
                       </div>
-                      <div className="col-span-1 flex flex-col justify-center items-center bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
-                        <div className="text-blue-400 text-3xl font-bold rounded-2xl">
+                      <div className="col-span-1 flex flex-col justify-center items-center text-blue-400 font-bold bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
+                        <div className="sm:text-2xl text-xl  font-medium sm:font-semibold  rounded-2xl">
                           Percentage
                         </div>
                         <div className="text-blue-500 font-bold">
                           {student.percentage}%
                         </div>
                       </div>
-                      <div className="col-span-1 flex flex-col justify-center items-center bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
-                        <div className="text-blue-400 text-3xl font-bold rounded-2xl">
+                      <div className="col-span-1 flex flex-col justify-center items-center text-blue-400 font-bold bg-white rounded-2xl px-6 py-6 text-center shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
+                        <div className="sm:text-2xl text-xl  font-medium sm:font-semibold rounded-2xl">
                           Status
                         </div>
                         <div className="text-blue-500 font-bold">
